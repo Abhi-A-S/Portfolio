@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="main-doc">
+        <h1>Python Documentation</h1>
+        <div id="main-container">
+            <nav id="navbar">
+                <header>
+                    <h2>Python Documentation</h2>
+                </header>
+                <ul>
+                    <li><a href="#variables" class="nav-link">variables</a></li>
+                    <li><a href="#operators" class="nav-link">operators</a></li>
+                    <li><a href="#conditional" class="nav-link">conditional</a></li>
+                    <li><a href="#looping" class="nav-link">looping</a></li>
+                    <li><a href="#functions" class="nav-link">functions</a></li>
+                </ul>
+            </nav>
+            <div>
+                <section id="variables" class="main-section">
+                    <header>
+                        <h2>variables</h2>
+                    </header>
+
+                    <p>
+                        Variables are containers for storing data values. A variable can have a short name (like x and
+                        y)
+                        or a more descriptive name (age, carname, total_volume). Rules for Python variables:
+                    <ul>
+                        <li>A variable name must start with a letter or the underscore character</li>
+                        <li>A variable name cannot start with a number</li>
+                        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+                        </li>
+                        <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+                        <li>A variable name cannot be any of the Python keywords.</li>
+                    </ul>
+                    </p>
+
+                    <code>
+                        <pre>
+                        x = 5 
+                        y = "John" 
+                        print(x) 
+                        print(y)</pre>
+                    </code>
+
+                    <p>
+                        Python has no command for declaring a variable. A variable is created the moment you first
+                        assign a value to it.
+                    </p>
+                </section>
+
+                <section id="operators" class="main-section">
+                    <header>
+                        <h2>operators</h2>
+                    </header>
+
+                    <p>
+                        Operators are used to perform operations on variables and values. In the example below, we use
+                        the + operator to add together two values, Python divides the operators in the following groups:
+                    <ul>
+                        <li>Arithmetic operators: { +, -, *, /, %, **, // }</li>
+                        <li>Assignment operators: { =, +=, -=, *=, /=, %=, //=, **=, &=, |=, ^=, &lt;&lt;=, &gt;&gt;=,
+                            := }
+                        </li>
+                        <li>Comparison operators : { ==, !=, &gt;, &lt;, &gt;=, &lt;= }</li>
+                        <li>Logical operators : { and, or, not }</li>
+                        <li>Identity operators : { is, is not }</li>
+                        <li>Membership operators : { in, not in }</li>
+                        <li>Bitwise operators : { &, |, ^, ~, &gt;, &lt; }</li>
+                    </ul>
+                    </p>
+
+                    <code>
+                        <pre>
+                        print(100 + 5 * 3)</pre>
+                    </code>
+
+                    <p>
+                        Operator precedence describes the order in which operations are performed. Multiplication * has
+                        higher precedence than addition +, and therefor multiplications are evaluated before additions.
+                    </p>
+                </section>
+
+                <section id="conditional" class="main-section">
+                    <header>
+                        <h2>conditional</h2>
+                    </header>
+
+                    <p>
+                        Conditional Statements are statements in Python that provide a choice for the control flow based
+                        on a condition. It means that the control flow of the Python program will be decided based on
+                        the outcome of the condition. Now let us see how Conditional Statements are implemented in
+                        Python.
+                    </p>
+
+                    <ul>
+                        <li>simple if</li>
+                        <li>if else</li>
+                        <li>if elif else</li>
+                        <li>nested if</li>
+                    </ul>
+
+                    <code>
+                        <pre>
+                        a = 200 
+                        b = 33 
+                        if b > a: 
+                        &Tab;print("b is greater than a") 
+                        elif a == b: 
+                        &Tab;print("a and b are equal") 
+                        else: 
+                        &Tab;print("a is greater than b")</pre>
+                    </code>
+
+                    <p>The above example used</p>
+                </section>
+
+                <section id="looping" class="main-section">
+                    <header>
+                        <h2>looping</h2>
+                    </header>
+
+                    <p>Looping is a fundamental aspect of programming languages. It allows you to execute a piece of
+                        code
+                        repeatedly until some exit condition is met, at which point the program will move on to the next
+                        piece
+                        of code. In Python, there are two different types of loops:
+                    <ul>
+                        <li>while</li>
+                        <li>for</li>
+                    </ul>
+                    </p>
+
+                    <code>
+                        <pre>
+                        i = 1 
+                        while i &lt; 6: 
+                        print(i) 
+                        i += 1</pre>
+                    </code>
+
+                    <p>
+                        With the while loop we can execute a set of statements as long as a condition is true. A for
+                        loop is
+                        used
+                        for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a
+                        string).
+                    </p>
+                </section>
+
+                <section id="functions" class="main-section">
+                    <header>
+                        <h2>functions</h2>
+                    </header>
+
+                    <p>
+                        A function is a block of code which only runs when it is called. You can pass data, known as
+                        parameters,
+                        into a function. A function can return data as a result.
+                    </p>
+
+                    <code>
+                        <pre>
+                        def my_function(x):
+                        return 5 * x
+                    
+                        print(my_function(3))</pre>
+                    </code>
+
+                    <p>Python also accepts function recursion, which means a defined function can call itself.</p>
+                </section>
+            </div>
+        </div>
+        <a id="back-to-top" href="#">back to top</a>
+    </main>
+</body>
+
+</html>

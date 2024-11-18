@@ -1,0 +1,73 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.4rem;
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 80%;
+}
+
+body {
+    background-attachment: fixed;
+    background-color: #000;
+    background-image: url("chess-checkmated-chess-pieces-black-white-957312.jpeg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    opacity: 0.95;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+form {
+    background-color: #333333ff;
+    border-radius: 25px;
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 2rem;
+}
+
+label {
+    display: block;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.inline {
+    width: unset;
+}
+
+fieldset {
+    border-bottom: #888 solid 1px;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+legend {
+    margin-bottom: 0.25rem;
+    text-align: center;
+    text-decoration: underline dashed 1px;
+}
+
+form p {
+    text-align: unset;
+}

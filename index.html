@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Abhishek S">
+    <meta name="description" content="Hello there! I'm Abhishek S that this is my Portfolio page">
     <title>Abhi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <header id="welcome-section">
+        <h1>Hello There! I'm Abhishek S</h1>
+        <p>
+            I am a Computer Science Student who aspires to create unique Websites and Games. Currently in the process of
+            gaining knowledge in order to make my dreams come true
+        </p>
+        <p>Wanna know me more: click on <a target="_blank" href="about.html">the about Page</a></p>
+        <div id="profile-link-container"><a id="profile-link" target="_blank" href="https://github.com/Abhi-A-S">My
+                GitHub Profile</a></div>
+        <nav id="navbar">
+            <h2 class="sr-only">Page Navigation</h2>
+            <ul>
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#future">What's Next?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="skills">
+            <h2>Here is What i Know</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
+                            alt="C Programming" loading="lazy">
+                        <figcaption class="sr-only">C</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                            alt="C plus plus" loading="lazy">
+                        <figcaption class="sr-only">C++</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+                            alt="Java" loading="lazy">
+                        <figcaption class="sr-only">Java</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
+                            alt="Python" loading="lazy">
+                        <figcaption class="sr-only">Python</figcaption>
+                    </figure>
+                </div>
+                <div class="skill">
+                    <figure>
+                        <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg" alt="MySQL" loading="lazy">
+                        <figcaption class="sr-only">MySQL</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                            alt="HTML5" loading="lazy">
+                        <figcaption class="sr-only">HTML5</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                            alt="CSS3" loading="lazy">
+                        <figcaption class="sr-only">CSS3</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                            alt="JavaScript" loading="lazy">
+                        <figcaption class="sr-only">JavaScript</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Here is some of my recent work</h2>
+            <div class="projects-container">
+                <div class="project-container">
+                    <h3 class="project-tile">Survey Form</h3>
+                    <a target="_blank" href="projects/Survey-Form/Survey-Form.html"><img loading="lazy"
+                            src="projects/images/Survey-Form.png" alt="Survey Form"></a>
+                </div>
+                <div class="project-container">
+                    <h3 class="project-tile">Tribute Page</h3>
+                    <a target="_blank" href="projects/Tribute-Page/Tribute-Page.html"><img loading="lazy"
+                            src="projects/images/Tribute-Page.png" alt="Tribute Page"></a>
+                </div>
+                <div class="project-container">
+                    <h3 class="project-tile">Technical Documentation</h3>
+                    <a target="_blank" href="projects/Technical-Documentation/Technical-Documentation.html"><img
+                            loading="lazy" src="projects/images/Technical-Documentation.png"
+                            alt="Technical Documentation"></a>
+                </div>
+                <div class="project-container">
+                    <h3 class="project-tile">Product Landing Page</h3>
+                    <a target="_blank" href="projects/Product-Landing-Page/Product-Landing-Page.html"><img
+                            loading="lazy" src="projects/images/Product-Landing-Page.png"
+                            alt="Product Landing Page"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TODO
+        <section id="future">
+            <h2>Here are some things I want to learn about</h2>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Unreal_Engine_Logo_%28new_typeface%29.svg"
+                    alt="Unreal Engine" loading="lazy">
+                <figcaption>Unreal Engine</figcaption>
+            </figure>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="Go" loading="lazy">
+                <figcaption>Go</figcaption>
+            </figure>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg"
+                    alt="Rust" loading="lazy">
+                <figcaption>Rust</figcaption>
+            </figure>
+        </section>
+        -->
+        
+    </main>
+    <footer>
+        <p>All Images, Logos and Names used belong to their respective Copyright holders.</p>
+    </footer>
 </body>
+
 </html>

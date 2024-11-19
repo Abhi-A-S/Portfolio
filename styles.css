@@ -11,6 +11,7 @@ img {
     object-fit: contain;
 }
 
+
 :root {
     --color1: #90F1EF;
     --color2: #CA2E55;
@@ -19,18 +20,14 @@ img {
     --color5: #010400;
 }
 
-/*
-@media screen and (prefers-color-scheme: dark) {
-    :root {
-        --color1: #90F1EF;
-        --color2: #30332E;
-        --color3: #010400;
-        --color4: #CA2E55;
-        --color5: #FFFBFC;
-    }
+.nowrap {
+    text-wrap: nowrap;
 }
-    */
 
+
+a:any-link {
+    color: var(--color5);
+}
 
 html {
     color: var(--color5);
@@ -43,12 +40,45 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--color3);
+    overflow-x: hidden;
 }
 
 header,
 main {
     width: 75%;
     margin: 0 auto;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    align-items: center;
+}
+
+.profile-image-container img {
+    width: 100%;
+    border: 4px double var(--color2);
+    border-radius: 50%;
+}
+
+.profile-text-container {
+    place-content: center;
+    padding: 1.5rem;
+    font-size: 150%;
+    text-align: center;
+}
+
+.profile-container h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: underline 7px;
+}
+
+img.link-image {
+    display: inline-block;
+    height: 2rem;
 }
 
 #navbar {
@@ -58,6 +88,7 @@ main {
     background-color: var(--color1);
     width: 100%;
     padding: 0.5rem;
+    z-index: 1;
 }
 
 #navbar ul {
@@ -87,28 +118,49 @@ main {
 
 header,
 section {
-    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .skills-container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .skill {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    min-height: 225px;
+    gap: 2rem;
+}
+
+
+.skill .sql {
+    transform: scale(1.5);
+    justify-content: space-evenly;
 }
 
 .skill img {
     width: 10rem;
     margin: 0 auto;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.5s;
+}
+
+.skill img:hover {
+    transform: scale(1.25);
+}
+
+img.sql:hover {
+    transform: scale(2);
 }
 
 .skill figure {
@@ -122,16 +174,30 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 2rem;
     justify-content: space-between;
-    gap: 2rem;
+    padding: 2rem;
 }
 
 .project-container {
-    width: 40%;
+    max-width: max(40%, 350px);
+    position: relative;
+    margin: 0 auto;;
+}
+
+.project-description {
+    text-align: center;
+    font-size: 125%;
+    margin-bottom: 0.5rem;
+}
+
+h3.project-tile {
+    text-decoration: underline;
 }
 
 .project-container img {
     width: 100%;
+    border-radius: 17.5% ;
 }
 
 .project-container h3 {
@@ -142,4 +208,56 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--color1);
+}
+
+.project-container img {
+    transition: all 0.4s;
+}
+
+.project-container img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column;
+        height: unset;
+    }
+    .profile-image-container img {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+    header, main {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        margin-top: 2.5rem;
+    }
+    .project-container{
+        max-width: unset;
+    }
+    .project-container img {
+        transition: unset;
+    }
+    .project-container img:hover {
+        transform: unset;
+    }
+    .profile-container h1 {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .skill img {
+        width: 6rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
 }

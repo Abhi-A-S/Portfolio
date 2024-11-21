@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
     /*border: 1px solid red;*/
+    scroll-margin-top: 5rem;
+    scroll-snap-align: top;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -12,6 +18,7 @@
     --green-color: #23CE6B;
     --red-color: #EB5160;
     --white-color: #FFFBFE;
+    --transition-params: all 0.5s;
 }
 
 .sr-only {
@@ -28,12 +35,16 @@
 
 a {
     display: inline-block;
-    transition: all 0.5s;
+    transition: var(--transition-params);
 }
 
 a:any-link {
     color: unset;
     text-decoration: none;
+}
+
+hr {
+    margin: 3rem 0;
 }
 
 body {
@@ -42,12 +53,17 @@ body {
     color: var(--white-color);
     font-family: Helvetica, sans-serif;
     min-height: calc(100vh - 2px);
+    font-size: 160%;
 }
 
 header,
 main {
     width: 70%;
     margin: 0 auto;
+}
+
+header {
+    margin-bottom: 5rem;
 }
 
 .profile-container {
@@ -62,14 +78,13 @@ main {
 .profile-image-container {
     width: 90%;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px var(--red-color);
-    transition: all 0.5s;
+    box-shadow: 0px 0px 1rem var(--red-color);
+    transition: var(--transition-params);
     overflow: hidden;
-    transition: all 0.5s;
 }
 
 .profile-image-container:hover {
-    box-shadow: 0px 0px 10px var(--green-color);
+    box-shadow: 0px 0px 1rem var(--green-color);
 }
 
 .profile-image-container img {
@@ -78,7 +93,7 @@ main {
     display: block;
     border-radius: 50%;
     box-shadow: 0px 0px 15px var(--red-color);
-    transition: all 0.5s;
+    transition: var(--transition-params);
 }
 
 .profile-image-container img:hover {
@@ -90,7 +105,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 160%;
     line-height: 1.3;
     letter-spacing: 1.7px;
 }
@@ -112,14 +126,12 @@ main {
 .logo {
     height: 2rem;
     width: auto;
-    transition: all 0.5s;
+    transition: var(--transition-params);
 }
 
 .logo:hover {
     border: none;
-    transform: scale(1.25);
-    box-shadow: 5px 5px 5px var(--red-color),
-        5px -5px 5px var(--red-color), -5px 5px 5px var(--red-color), -5px -5px 5px var(--red-color);
+    transform: scale(1.3);
 }
 
 #nav-bar {
@@ -132,6 +144,8 @@ main {
     font-size: 2rem;
     font-weight: bold;
     box-shadow: 0 5px 5px var(--dark-color);
+    z-index: 1;
+    font-size: 100%;
 }
 
 .nav-links-container {
@@ -155,9 +169,80 @@ main {
     transform: scale(1.1, 1.2);
 }
 
+section {
+    margin-bottom: 4rem;
+}
+
+.skills-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills figure {
+    height: 200px;
+}
+
+.skills img {
+    height: 100%;
+    display: block;
+    transition: var(--transition-params);
+}
+
+.skills .mysql {
+    height: 125%;
+    margin-top: -2rem;
+}
+
+.skills img:hover {
+    transform: scale(1.25);
+}
+
+.resume-header {
+    margin-bottom: 1rem;
+}
+
+.projects-container {
+    padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.project-container {
+    width: 45%;
+}
+
+.project-container img {
+    width: 100%;
+    border-radius: 15%;
+    transition: var(--transition-params);
+}
+
+.project-container img:hover {
+    filter: opacity(65%);
+    transform: scale(1.1);
+}
+
+.project-description {
+    margin-bottom: 1rem;
+}
+
 .resume {
     display: block;
-    margin: -4rem auto;
+    margin: 0 auto;
     height: 89vh;
     width: 63vh;
     overflow: hidden;

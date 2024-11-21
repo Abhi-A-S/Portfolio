@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /*border: 1px solid red;*/
 }
 
 :root {
@@ -13,13 +14,38 @@
     --white-color: #FFFBFE;
 }
 
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+a {
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+a:any-link {
+    color: unset;
+    text-decoration: none;
+}
+
 body {
+    padding-top: 4rem;
     background-color: var(--black-color);
     color: var(--white-color);
     font-family: Helvetica, sans-serif;
+    min-height: calc(100vh - 2px);
 }
 
-header {
+header,
+main {
     width: 70%;
     margin: 0 auto;
 }
@@ -35,6 +61,15 @@ header {
 
 .profile-image-container {
     width: 90%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px var(--red-color);
+    transition: all 0.5s;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.profile-image-container:hover {
+    box-shadow: 0px 0px 10px var(--green-color);
 }
 
 .profile-image-container img {
@@ -43,6 +78,12 @@ header {
     display: block;
     border-radius: 50%;
     box-shadow: 0px 0px 15px var(--red-color);
+    transition: all 0.5s;
+}
+
+.profile-image-container img:hover {
+    object-fit: contain;
+    transform: scale(1.35);
 }
 
 .profile-text-container {
@@ -63,7 +104,68 @@ header {
     text-indent: 2rem;
 }
 
+.myname {
+    color: var(--blue-color);
+    font-weight: 600;
+}
+
 .logo {
     height: 2rem;
     width: auto;
+    transition: all 0.5s;
+}
+
+.logo:hover {
+    border: none;
+    transform: scale(1.25);
+    box-shadow: 5px 5px 5px var(--red-color),
+        5px -5px 5px var(--red-color), -5px 5px 5px var(--red-color), -5px -5px 5px var(--red-color);
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 5px var(--dark-color);
+}
+
+.nav-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: auto;
+
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 50%;
+    list-style-type: none;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--blue-color);
+    transform: scale(1.1, 1.2);
+}
+
+.resume {
+    display: block;
+    margin: -4rem auto;
+    height: 89vh;
+    width: 63vh;
+    overflow: hidden;
+}
+
+.footer {
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-color);
+    text-align: center;
+    width: 100%;
 }
